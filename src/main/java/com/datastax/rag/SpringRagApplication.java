@@ -47,9 +47,9 @@ import dev.langchain4j.store.embedding.cassandra.AstraDbEmbeddingStore;
         CassandraDataAutoConfiguration.class,
         CassandraAutoConfiguration.class }
 )
-public class SpringChatbotApplication implements CommandLineRunner {
+public class SpringRagApplication implements CommandLineRunner {
 
-	private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(SpringChatbotApplication.class.getName());
+	private static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(SpringRagApplication.class.getName());
 	
     @Value("${astra.database.name}")
     private static String databaseName = "langchain4j";
@@ -68,7 +68,7 @@ public class SpringChatbotApplication implements CommandLineRunner {
     private static EmbeddingStore<TextSegment> embeddingStore;
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringChatbotApplication.class, args);
+		SpringApplication.run(SpringRagApplication.class, args);
 	}
 
     public void run(String... args) 
